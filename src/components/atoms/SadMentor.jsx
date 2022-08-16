@@ -1,4 +1,4 @@
-const sadMentor = ({children}) => {
+const SadMentor = ({children}) => {
   return (
     <svg
       width="948"
@@ -26,4 +26,4 @@ const sadMentor = ({children}) => {
   );
 };
 
-export default sadMentor;
+export default SadMentor;
