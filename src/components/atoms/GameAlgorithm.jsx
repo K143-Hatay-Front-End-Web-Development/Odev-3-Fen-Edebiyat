@@ -101,7 +101,7 @@ const GameAlgorithm = (props) => {
     return {
       question: firstRandomValue + " * " + secondRandomValue + "?",
       answer: firstRandomValue * secondRandomValue,
-      choice: shuffle(choices),
+      choices: shuffle(choices),
       score: 20,
     };
   };
@@ -135,7 +135,7 @@ const GameAlgorithm = (props) => {
     return {
       question: firstRandomValue + " ÷ " + secondRandomValue + "?",
       answer: rightChoice,
-      choice: shuffle(choices),
+      choices: shuffle(choices),
       score: 30,
     };
   };
