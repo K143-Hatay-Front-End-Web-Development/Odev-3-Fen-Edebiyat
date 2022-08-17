@@ -12,12 +12,7 @@ const Main = () => {
   const pageLinkCreator = (selectedPage) => {
     setPage(() => selectedPage);
   };
-  const stats={
-    puan : 15,
-    cozulen : 2,
-    yanlis : 0,
-    dogru : 2
-  }
+  
   return (
     <StatContext.Consumer>
       {(stats) => {
