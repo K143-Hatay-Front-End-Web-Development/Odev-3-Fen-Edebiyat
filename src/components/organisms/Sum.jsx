@@ -17,13 +17,14 @@ const Sum = () => {
   return (
     <div className="game-screen">
       <div className="left">
-        {ctx.isCorrect === true ? (
-          <HappyMentor>{question}</HappyMentor>
-        ) : ctx.isCorrect === false ? (
-          <SadMentor>{question}</SadMentor>
-        ) : (
-          <Mentor>{question}</Mentor>
-        )}
+        {
+        ctx.isCorrect === true ? 
+        <HappyMentor>{question}</HappyMentor> 
+        : ctx.isCorrect === false ? 
+        <SadMentor>{question}</SadMentor>
+        : 
+        <Mentor>{question}</Mentor>
+        }
       </div>
       <div className="right">
         <GameStats gameStats={ctx} />

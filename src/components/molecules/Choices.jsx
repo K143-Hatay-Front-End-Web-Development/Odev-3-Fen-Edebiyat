@@ -13,14 +13,14 @@ const Choices = ({ choices, answer }) => {
     if (selected === answer) {
       success.play();
       console.log("correct!");
-      ctx.isCorrext = true
+      ctx.isCorrect = true
       ctx.Points = 10;
     } else {
       failure.play();
       console.log("wrong!");
-      ctx.isCorrext = false;
+      ctx.isCorrect = false;
     }
-    console.log(ctx.isCorrext)
+    console.log(ctx.isCorrect)
   };
   return (
     <div className="choices">
