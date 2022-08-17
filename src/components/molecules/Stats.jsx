@@ -1,10 +1,12 @@
-const Stats = () => {
+const Stats = ({stats}) => {
+  console.log(stats)
   return (
+  
     <ul className="stats">
-      <li>Puan:</li>
-      <li>Çözülen Sayısı:</li>
-      <li>Yanlış Cevap:</li>
-      <li>Doğru Cevap:</li>
+      <li>Puan: {stats.point}</li>
+      <li>Çözülen Sayısı: {stats.questions}</li>
+      <li>Yanlış Cevap: {stats.wrongs}</li>
+      <li>Doğru Cevap: {stats.corrects}</li>
     </ul>
   );
 };
