@@ -1,9 +1,22 @@
 import Choice from "../atoms/Choice";
+import successSound from "../../assets/success.mp3";
+import failureSound from "../../assets/failure.mp3";
+
 const Choices = ({ choices, answer }) => {
+
+  const success = new Audio(successSound);
+  const failure = new Audio(failureSound);
+
   const clickHandler = (event) => {
-    const selected = Number(event.target.innerHTML)
-    if(selected === answer) console.log("correct!") 
-    else console.log("wrong!")
+
+    const selected = Number(event.target.innerHTML);
+
+    if (selected === answer) {
+      success.play();
+    } else {
+      failure.play();
+    }
+    
   };
   return (
     <div className="choices">
