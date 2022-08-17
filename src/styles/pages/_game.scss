@@ -56,17 +56,20 @@
     align-items: center;
     width: 100%;
     position: relative;
-   
+    
     .choices-1 {
       position: relative;
       left: -20px;
       align-self: flex-start;
+      cursor: pointer;
     }
     .choices-2 {
       align-self: center;
+      cursor: pointer;
     }
     .choices-3 {
       align-self: flex-start;
+      cursor: pointer;
     }
   }
 }
