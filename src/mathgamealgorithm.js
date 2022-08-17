@@ -1,7 +1,6 @@
 const MAX_QUESTION_COUNT = 10
 const MAX_POSSIBLE_RANDOM_NUMBER = 100
 
-
 function gameLogic(operations) {
     let questionCollections=[]
    
@@ -13,7 +12,6 @@ function gameLogic(operations) {
     return questionCollections
 }
 
-console.log(gameLogic('div'))
 //array shuffling
 function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
