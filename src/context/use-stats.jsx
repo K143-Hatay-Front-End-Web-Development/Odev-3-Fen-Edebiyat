@@ -1,8 +1,5 @@
 import { createContext } from "react";
 
-const StatContext = createContext({
-  stats: false,
-});
-
+const StatContext = createContext({});
 
 export default StatContext;
