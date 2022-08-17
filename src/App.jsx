@@ -7,25 +7,30 @@ import Multiply from "./components/organisms/Multiply";
 import Divide from "./components/organisms/Divide";
 import NotFound from "./components/organisms/NotFound";
 import StatContext from "./context/use-stats";
-
+import ScoreContext from "./context/use-scores";
+import getStatsFromLS from "./components/atoms/GetStatsFromLS";
 function App() {
-  const gamestats = {
-    point: 15, questions: 2, wrongs: 0, corrects: 2 
-  }
+  const stats = getStatsFromLS();
+  const scores = {
+    Points: 0,
+    Toure: 0,
+    Question: 0,
+    isCorrect: ""
+  };
   return (
     <div className="App">
-      <StatContext.Provider
-        value={gamestats}
-      >
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="sum" element={<Sum />} />
-          <Route path="subtract" element={<Subtract />} />
-          <Route path="multiply" element={<Multiply />} />
-          <Route path="divide" element={<Divide />} />
-          <Route path="result" element={<Result />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+      <StatContext.Provider value={stats}>
+        <ScoreContext.Provider value={scores}>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="sum" element={<Sum />} />
+            <Route path="subtract" element={<Subtract />} />
+            <Route path="multiply" element={<Multiply />} />
+            <Route path="divide" element={<Divide />} />
+            <Route path="result" element={<Result />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </ScoreContext.Provider>
       </StatContext.Provider>
     </div>
   );

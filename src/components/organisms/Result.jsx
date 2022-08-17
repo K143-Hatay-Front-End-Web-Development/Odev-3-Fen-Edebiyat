@@ -1,7 +1,23 @@
 import { Link } from "react-router-dom";
 import Header from "../molecules/Header";
 import Start from "../atoms/Start";
+import { useEffect } from "react";
 const Result = () => {
+
+
+  const setLocalStorageItems = () => {
+    localStorage.setItem("stats", JSON.stringify({
+      points: 150,
+      answeredQuestions: 10,
+      correctAnswers : 7,
+      wrongAnswers : 3
+    }));
+  }
+
+  useEffect (()=> {
+    setLocalStorageItems();
+  }, [])
+
   return (
     <div className="result-page">
       <div className="result-section">

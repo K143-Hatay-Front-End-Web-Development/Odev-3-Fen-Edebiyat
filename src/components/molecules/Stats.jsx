@@ -3,10 +3,10 @@ const Stats = ({stats}) => {
   return (
   
     <ul className="stats">
-      <li>Puan: {stats.point}</li>
-      <li>Çözülen Sayısı: {stats.questions}</li>
-      <li>Yanlış Cevap: {stats.wrongs}</li>
-      <li>Doğru Cevap: {stats.corrects}</li>
+      <li>Puan: {stats.points}</li>
+      <li>Çözülen Sayısı: {stats.answeredQuestions}</li>
+      <li>Yanlış Cevap: {stats.wrongAnswers}</li>
+      <li>Doğru Cevap: {stats.correctAnswers}</li>
     </ul>
   );
 };

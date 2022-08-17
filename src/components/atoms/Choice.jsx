@@ -2,6 +2,7 @@ const Choice = ({ className, children, onClick }) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="65"
       height="65"
       viewBox="0 0 203 178"
@@ -14,7 +15,6 @@ const Choice = ({ className, children, onClick }) => {
       />
       <text
         value={children}
-        onClick={onClick}
         x="50%"
         y="50%"
         textAnchor="middle"

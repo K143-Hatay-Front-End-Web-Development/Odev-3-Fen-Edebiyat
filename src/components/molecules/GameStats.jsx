@@ -1,9 +1,10 @@
-const GameStats = () => {
+const GameStats = ({gameStats}) => {
   return (
     <div className="game-stats">
-      <span>Puan: 120</span>
-      <span>Tur: 2</span>
-      <span>Soru: 7</span>
+      {console.log(gameStats)}
+      <span>Puan: {gameStats.Points}</span>
+      <span>Tur: {gameStats.Toure}</span>
+      <span>Soru: {gameStats.Question}</span>
     </div>
   );
 };

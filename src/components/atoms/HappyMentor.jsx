@@ -1,9 +1,9 @@
 const HappyMentor = ({ children }) => {
   return (
     <svg
-      width="948"
-      height="944"
-      viewBox="0 0 948 944"
+    width="480"
+    height="260"
+      viewBox="0 0 1920 1080"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Header from "../molecules/Header";
 import Stats from "../molecules/Stats";
@@ -8,19 +8,21 @@ import StatContext from "../../context/use-stats";
 
 const Main = () => {
   const [page, setPage] = useState("/");
-
+  const ctx = useContext(StatContext)
+  
   const pageLinkCreator = (selectedPage) => {
     setPage(() => selectedPage);
   };
-  
+
   return (
     <StatContext.Consumer>
-      {(stats) => {
+      {(ctx) => {
+        {console.log(ctx)}
         return (
           <div className="main">
             <Header type="main-header">Matematik Oyunu</Header>
             <div className="main-section">
-              <Stats stats={stats} />
+              <Stats stats={ctx} />
               <Nav pageLink={pageLinkCreator} />
             </div>
             <Link to={page}>
