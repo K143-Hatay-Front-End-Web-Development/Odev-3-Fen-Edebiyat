@@ -2,13 +2,13 @@ const MAX_QUESTION_COUNT = 10
 const MAX_POSSIBLE_RANDOM_NUMBER = 100
 
 function gameLogic(operations) {
-    let questionCollections=[]
-   
+    let questionCollections = []
+
     for (let a = 0; a < MAX_QUESTION_COUNT; a++) {
         //console.log(makeQuestion()[operations]())
         questionCollections.push(makeQuestion()[operations]())
     }
-    
+
     return questionCollections
 }
 
@@ -30,7 +30,6 @@ function getRandomInt(min, max) {
 
 //creating question object
 function makeQuestion() {
-    let t=this
     let firstRandomValue = Math.floor(Math.random() * MAX_POSSIBLE_RANDOM_NUMBER)
     let secondRandomValue = Math.floor(Math.random() * MAX_POSSIBLE_RANDOM_NUMBER)
     let operations = {
@@ -38,12 +37,11 @@ function makeQuestion() {
         sum: () => makeSum(firstRandomValue, secondRandomValue),
         sub: () => makeSub(firstRandomValue, secondRandomValue),
         mult: () => makeMult(firstRandomValue, secondRandomValue),
-        div: ()=>makeDiv(firstRandomValue),
+        div: () => makeDiv(firstRandomValue),
     }
-
     return operations
-
 }
+
 //sum function
 function makeSum(firstRandomValue, secondRandomValue) {
     let rightChoice = firstRandomValue + secondRandomValue
