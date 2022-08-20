@@ -5,11 +5,11 @@ import Stats from "../molecules/Stats";
 import Nav from "../molecules/Nav";
 import Start from "../atoms/Start";
 import StatContext from "../../context/use-stats";
+import getStatsFromLS from "../atoms/GetStatsFromLS";
 
 const Main = () => {
   const [page, setPage] = useState("/");
   const ctx = useContext(StatContext)
-  
   const pageLinkCreator = (selectedPage) => {
     setPage(() => selectedPage);
   };
@@ -17,7 +17,6 @@ const Main = () => {
   return (
     <StatContext.Consumer>
       {(ctx) => {
-        {console.log(ctx)}
         return (
           <div className="main">
             <Header type="main-header">Matematik Oyunu</Header>

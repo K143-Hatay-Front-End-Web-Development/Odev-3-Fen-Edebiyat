@@ -1,23 +1,18 @@
-import Choices from "../molecules/Choices";
-import Mentor from "../atoms/Mentor";
-import GameStats from "../molecules/GameStats";
-import GameAlgorithm from "../atoms/GameAlgorithm";
+import { useContext } from "react";
+import ScoreContext from "../../context/use-scores";
+import CreatePage from "./CreatePage";
+
 const Subtract = () => {
-  const pack = GameAlgorithm("sub");
-  const question = pack[0].question;
-  const choices = pack[0].choices;
-  const correctAnswer = pack[0].answer;
+
+  const gameScore = useContext(ScoreContext);
+  gameScore.Points = 0;
+  gameScore.Tour = 0;
+  gameScore.Question = 0;
+  gameScore.True = 0;
+  gameScore.False = 0;
 
   return (
-    <div className="game-screen">
-      <div className="left">
-        <Mentor>{question}</Mentor>
-      </div>
-      <div className="right">
-        <GameStats />
-        <Choices choices={choices} answer={correctAnswer} />
-      </div>
-    </div>
+    <CreatePage operation={"sub"}/>
   );
 };
 

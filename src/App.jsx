@@ -13,9 +13,11 @@ function App() {
   const stats = getStatsFromLS();
   const scores = {
     Points: 0,
-    Toure: 0,
+    Tour: 0,
     Question: 0,
-    isCorrect: ""
+    True: 0,
+    False: 0,
+    Questions: [],
   };
   return (
     <div className="App">

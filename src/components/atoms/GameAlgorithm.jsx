@@ -58,7 +58,7 @@ const GameAlgorithm = (props) => {
     ];
 
     return {
-      question: firstRandomValue + " + " + secondRandomValue + "?",
+      question: firstRandomValue + " + " + secondRandomValue + " = ?",
       answer: firstRandomValue + secondRandomValue,
       choices: shuffle(choices),
       score: 10,
@@ -81,7 +81,7 @@ const GameAlgorithm = (props) => {
       rightChoice,
     ];
     return {
-      question: firstRandomValue + " - " + secondRandomValue + "?",
+      question: firstRandomValue + " - " + secondRandomValue + " = ?",
       answer: firstRandomValue - secondRandomValue,
       choices: shuffle(choices),
       score: 15,
@@ -99,7 +99,7 @@ const GameAlgorithm = (props) => {
       rightChoice,
     ];
     return {
-      question: firstRandomValue + " * " + secondRandomValue + "?",
+      question: firstRandomValue + " * " + secondRandomValue + " = ?",
       answer: firstRandomValue * secondRandomValue,
       choices: shuffle(choices),
       score: 20,
@@ -133,7 +133,7 @@ const GameAlgorithm = (props) => {
     ];
 
     return {
-      question: firstRandomValue + " ÷ " + secondRandomValue + "?",
+      question: firstRandomValue + " ÷ " + secondRandomValue + " = ?",
       answer: rightChoice,
       choices: shuffle(choices),
       score: 30,
