@@ -43,7 +43,7 @@ const Result = () => {
     }
     
   };
-
+console.log(gameScores)
   useEffect(() => {
     setLocalStorageItems();
   }, []);
@@ -68,6 +68,7 @@ const Result = () => {
             {console.log(gameScores.Questions.state)}
             <li>
               {gameScores.Questions[0].question.slice(0, -1)}{" "}
+              {gameScores.Questions[0].answer}
               {gameScores.Questions[0].state ? (
                 <Checked width="18" height="18" />
               ) : (
@@ -100,7 +101,7 @@ const Result = () => {
             </li>
             <li>
               {gameScores.Questions[4].question.slice(0, -1)}{" "}
-              {gameScores.Questions[4].state  ? (
+               {gameScores.Questions[4].state  ? (
                 <Checked width="18" height="18" />
               ) : (
                 <UnChecked width="18" height="18" />

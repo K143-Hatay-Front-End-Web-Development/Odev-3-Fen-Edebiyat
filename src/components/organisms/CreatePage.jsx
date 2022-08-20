@@ -55,13 +55,13 @@ const CreatePage = ({ operation }) => {
         updatedScore.Points += 5;
       }
       gameScore.True += 1;
-      gameScore.Questions.push({question: question, state: true})
+      gameScore.Questions.push({question: question, state: true, answer:pack[ updatedScore.Question-1].answer})
       setScores(() => updatedScore);
       setIscorrect(() => "correct");
       success.play();
     } else {
       gameScore.False += 1;
-      gameScore.Questions.push({question: question, state: false})
+      gameScore.Questions.push({question: question, state: false,answer:pack[ updatedScore.Question-1].answer})
       setScores(() => updatedScore);
       setIscorrect(() => "wrong");
       failure.play();
