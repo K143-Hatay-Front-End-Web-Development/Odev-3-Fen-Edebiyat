@@ -1,10 +1,27 @@
-# Odev-3
+# Homework - 3
+  Simple Math Game for kids
+  ---
+ ![Screenshot from 2022-08-20 08-04-38](https://user-images.githubusercontent.com/104576153/185729837-d1dc72f4-8c63-4d88-bceb-d379a1986db6.png)
 
-## Grup Üyeleri
-- [Ad] [Soyad]
-- [Ad] [Soyad]
+  
+## Project Details
+### Tech Stack:
+- ReactJS
+- Sass
 
-## İçerik
+## Scripts
+### Run on Locale
+`npm install` <br/>
+`npm start`
+### Build
+ `npm run build`
 
--  [Figma ](https://www.figma.com/file/KBUZCtv1lw507YqSABRXwV/Matematik-%C3%96devi?node-id=0%3A1)
--  
+
+## Team
+- [Ayşen Aydın](https://github.com/aysenayydin)
+
+- [Erdinç Akdoğan](https://github.com/erdincakdogan)
+
+- [Sercan Ateş](https://github.com/atessercan)
+
+  
