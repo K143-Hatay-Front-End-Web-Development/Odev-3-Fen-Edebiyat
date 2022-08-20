@@ -1,6 +1,8 @@
 const GameAlgorithm = (props) => {
   const MAX_QUESTION_COUNT = 10;
   const MAX_POSSIBLE_RANDOM_NUMBER = 100;
+  const MAX_POSSIBLE_NUMBER_SUM=49;
+  const MAX_POSSIBLE_NUMBER_MULT=9;
 
   const gameLogic = (operations) => {
     let questionCollections = [];
@@ -47,7 +49,13 @@ const GameAlgorithm = (props) => {
   };
 
   //sum const
-  const makeSum = (firstRandomValue, secondRandomValue) => {
+  const makeSum = () => {
+    let firstRandomValue= Math.floor(
+      Math.random() * MAX_POSSIBLE_NUMBER_SUM
+    );
+    let secondRandomValue= Math.floor(
+      Math.random() * MAX_POSSIBLE_NUMBER_SUM+1
+    );
     let rightChoice = firstRandomValue + secondRandomValue;
     let firstRandomChoice = getRandomInt(1, 3);
     let secondRandomChoice = getRandomInt(1, 4);
@@ -61,7 +69,7 @@ const GameAlgorithm = (props) => {
       question: firstRandomValue + " + " + secondRandomValue + " = ?",
       answer: firstRandomValue + secondRandomValue,
       choices: shuffle(choices),
-      score: 10,
+      score: 2,
     };
   };
 
@@ -84,12 +92,18 @@ const GameAlgorithm = (props) => {
       question: firstRandomValue + " - " + secondRandomValue + " = ?",
       answer: firstRandomValue - secondRandomValue,
       choices: shuffle(choices),
-      score: 15,
+      score: 3,
     };
   };
 
   // multiplication const
-  const makeMult = (firstRandomValue, secondRandomValue) => {
+  const makeMult = () => {
+    let firstRandomValue= Math.floor(
+      Math.random() * MAX_POSSIBLE_NUMBER_MULT
+    );
+    let secondRandomValue= Math.floor(
+      Math.random() * MAX_POSSIBLE_NUMBER_MULT
+    );
     let rightChoice = firstRandomValue * secondRandomValue;
     let firstRandomChoice = getRandomInt(1, 3);
     let secondRandomChoice = getRandomInt(1, 4);
@@ -102,7 +116,7 @@ const GameAlgorithm = (props) => {
       question: firstRandomValue + " * " + secondRandomValue + " = ?",
       answer: firstRandomValue * secondRandomValue,
       choices: shuffle(choices),
-      score: 20,
+      score: 4,
     };
   };
 
@@ -136,7 +150,7 @@ const GameAlgorithm = (props) => {
       question: firstRandomValue + " ÷ " + secondRandomValue + " = ?",
       answer: rightChoice,
       choices: shuffle(choices),
-      score: 30,
+      score: 5,
     };
   };
   return gameLogic(props);
